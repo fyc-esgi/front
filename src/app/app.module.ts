@@ -4,15 +4,30 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './component/body/body.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PokemonComponent } from './component/pokemon/pokemon.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MaterialModule} from './material-module';
+import { TrainerComponent } from './component/trainer/trainer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BodyComponent
+    BodyComponent,
+    PokemonComponent,
+    TrainerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
