@@ -8,7 +8,7 @@
   <mat-form-field>
     <mat-label>Type</mat-label>
     <mat-select [(ngModel)]="data.element_type">
-      <mat-option *ngFor="let pokemon_type of pokemon_types" [value]="pokemon_type">
+      <mat-option *ngFor="let pokemon_type of pokemonTypes" [value]="pokemon_type">
         {{pokemon_type}}
       </mat-option>
     </mat-select>

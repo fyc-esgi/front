@@ -75,9 +75,11 @@ export class PokemonComponent implements OnInit, AfterViewInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.pokemonService.updatePokemon(result).subscribe(httpReturn => {
-        this.loadData();
-      });
+      if (result != null){
+        this.pokemonService.updatePokemon(result).subscribe(httpReturn => {
+          this.loadData();
+        });
+      }
     });
   }
 

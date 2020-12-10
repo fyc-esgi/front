@@ -9,7 +9,7 @@ import {Pokemon} from '../../model/pokemon';
 })
 export class PokemonFormComponent  implements OnInit, AfterViewInit {
   isCreate = false;
-  pokemon_types = ['Normal', 'Water', 'Electric', 'Fighting', 'Ground', 'Psychic', 'Rock', 'Dark', 'Steel', 'Fire', 'Grass', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dragon', 'Fairy'];
+  pokemonTypes = ['Normal', 'Water', 'Electric', 'Fighting', 'Ground', 'Psychic', 'Rock', 'Dark', 'Steel', 'Fire', 'Grass', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dragon', 'Fairy'];
   constructor(
     public dialogRef: MatDialogRef<PokemonFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Pokemon) {}

@@ -1,1 +1,17 @@
-<p>trainer-form works!</p>
+<h1 mat-dialog-title>{{isCreate ? 'New': 'Update'}} Trainer {{isCreate ? '': data.name}}</h1>
+<div mat-dialog-content>
+  <mat-form-field *ngIf="isCreate">
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input matInput [(ngModel)]="data.title">
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Validate</button>
+</div>
