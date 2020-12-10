@@ -11,13 +11,21 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MaterialModule} from './material-module';
 import { TrainerComponent } from './component/trainer/trainer.component';
+import { PokemonFormComponent } from './component/pokemon-form/pokemon-form.component';
+import { PokemonDeleteComponent } from './component/pokemon-delete/pokemon-delete.component';
+import { TrainerFormComponent } from './component/trainer-form/trainer-form.component';
+import { TrainerDeleteComponent } from './component/trainer-delete/trainer-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BodyComponent,
     PokemonComponent,
-    TrainerComponent
+    TrainerComponent,
+    PokemonFormComponent,
+    PokemonDeleteComponent,
+    TrainerFormComponent,
+    TrainerDeleteComponent
   ],
   imports: [
     BrowserModule,

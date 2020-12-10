@@ -1,1 +1,61 @@
-<p>pokemon works!</p>
+
+<div class="pokefyc-panel">
+  <div>
+    <button mat-raised-button (click)="addPokemon()">Add Pokemon</button>
+  </div>
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
+  </mat-form-field>
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="this.dataSource" class="mat-elevation-z8" matSort>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let pokemon"> {{pokemon.name}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="element_type">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+        <td mat-cell *matCellDef="let pokemon"> {{pokemon.element_type}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="hp">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> HP </th>
+        <td mat-cell *matCellDef="let pokemon"> {{pokemon.hp}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="attack">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Attack </th>
+        <td mat-cell *matCellDef="let pokemon"> {{pokemon.attack}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="defense">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Defense </th>
+        <td mat-cell *matCellDef="let pokemon"> {{pokemon.defense}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="speed">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Speed </th>
+        <td mat-cell *matCellDef="let pokemon"> {{pokemon.speed}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let pokemon">
+          <mat-icon (click)="updatePokemon(pokemon)" class="pokefyc-button" >edit</mat-icon>
+          <mat-icon class="pokefyc-button"  (click)="deletePokemon(pokemon)" >delete</mat-icon>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+</div>
+
+
