@@ -7,23 +7,20 @@ import {Pokemon} from '../../../models/pokemon';
   templateUrl: './pokemon-form.component.html',
   styleUrls: ['./pokemon-form.component.scss']
 })
-export class PokemonFormComponent  implements OnInit, AfterViewInit {
+export class PokemonFormComponent  implements OnInit {
   isCreate = false;
   pokemonTypes = ['Normal', 'Water', 'Electric', 'Fighting', 'Ground', 'Psychic', 'Rock', 'Dark', 'Steel', 'Fire', 'Grass', 'Ice', 'Poison', 'Flying', 'Bug', 'Ghost', 'Dragon', 'Fairy'];
   constructor(
     public dialogRef: MatDialogRef<PokemonFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Pokemon) {}
 
-  onNoClick(): void {
+  closeDialog(): void {
     this.dialogRef.close();
   }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     if (this.data.name === ''){
       this.isCreate = true;
     }
-  }
-
-  ngOnInit(): void {
   }
 }

@@ -7,6 +7,7 @@ import {MatSort} from '@angular/material/sort';
 import {PokemonFormComponent} from '../dialogs/pokemon-form/pokemon-form.component';
 import {MatDialog} from '@angular/material/dialog';
 import {PokemonDeleteComponent} from '../dialogs/pokemon-delete/pokemon-delete.component';
+import {AnalyticsService} from "../../service/analytics.service";
 
 @Component({
   selector: 'app-pokemon',
@@ -24,6 +25,7 @@ export class PokemonComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private pokemonService: PokemonService,
+              private analytics: AnalyticsService,
               public dialog: MatDialog) {
   }
 
@@ -64,6 +66,7 @@ export class PokemonComponent implements OnInit, AfterViewInit {
     dialogRef.afterClosed().subscribe(result => {
       this.pokemonService.addPokemon(result).subscribe(httpReturn => {
         this.loadData();
+        this.analytics.eventEmitter('add', 'pokemon', 'pokemon_added');
       });
     });
   }
