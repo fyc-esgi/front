@@ -7,7 +7,7 @@ import {MatSort} from '@angular/material/sort';
 import {PokemonFormComponent} from '../dialogs/pokemon-form/pokemon-form.component';
 import {MatDialog} from '@angular/material/dialog';
 import {PokemonDeleteComponent} from '../dialogs/pokemon-delete/pokemon-delete.component';
-import {AnalyticsService} from "../../service/analytics.service";
+import {AnalyticsService} from "../../services/analytics.service";
 
 @Component({
   selector: 'app-pokemon',
