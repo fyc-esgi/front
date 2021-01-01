@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import {Pokemon} from '../../model/pokemon';
-import {Trainer} from '../../model/trainer';
+import {Pokemon} from '../../../models/pokemon';
+import {Trainer} from '../../../models/trainer';
 
 @Component({
   selector: 'app-trainer-form',

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {ConstantsService} from './constants.service';
 import {Observable} from 'rxjs';
-import {Pokemon} from '../model/pokemon';
-import {HttpReturn} from '../model/httpReturn';
+import {Pokemon} from '../models/pokemon';
+import {HttpReturn} from '../models/httpReturn';
 
 @Injectable({
   providedIn: 'root'

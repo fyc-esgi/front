@@ -1,12 +1,12 @@
 import {Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-import {Trainer} from '../../model/trainer';
-import {TrainerService} from '../../service/trainer.service';
+import {Trainer} from '../../models/trainer';
+import {TrainerService} from '../../services/trainer.service';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {TrainerFormComponent} from '../trainer-form/trainer-form.component';
+import {TrainerFormComponent} from '../dialogs/trainer-form/trainer-form.component';
 import {MatDialog} from '@angular/material/dialog';
-import {TrainerDeleteComponent} from '../trainer-delete/trainer-delete.component';
+import {TrainerDeleteComponent} from '../dialogs/trainer-delete/trainer-delete.component';
 
 @Component({
   selector: 'app-trainer',
