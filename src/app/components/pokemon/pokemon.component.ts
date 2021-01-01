@@ -1,12 +1,12 @@
 import {Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-import {Pokemon} from '../../model/pokemon';
-import {PokemonService} from '../../service/pokemon.service';
+import {Pokemon} from '../../models/pokemon';
+import {PokemonService} from '../../services/pokemon.service';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {PokemonFormComponent} from '../pokemon-form/pokemon-form.component';
+import {PokemonFormComponent} from '../dialogs/pokemon-form/pokemon-form.component';
 import {MatDialog} from '@angular/material/dialog';
-import {PokemonDeleteComponent} from '../pokemon-delete/pokemon-delete.component';
+import {PokemonDeleteComponent} from '../dialogs/pokemon-delete/pokemon-delete.component';
 
 @Component({
   selector: 'app-pokemon',

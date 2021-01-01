@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpResponse} from '@angular/common/http';
 import {ConstantsService} from './constants.service';
 import {Observable} from 'rxjs';
-import {Trainer} from '../model/trainer';
-import {HttpReturn} from '../model/httpReturn';
+import {Trainer} from '../models/trainer';
+import {HttpReturn} from '../models/httpReturn';
 
 @Injectable({
   providedIn: 'root'

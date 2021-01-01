@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
-import {Pokemon} from '../../model/pokemon';
+import {Pokemon} from '../../../models/pokemon';
 
 @Component({
   selector: 'app-pokemon-delete',

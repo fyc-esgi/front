@@ -3,23 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BodyComponent } from './component/body/body.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PokemonComponent } from './component/pokemon/pokemon.component';
+import { PokemonComponent } from './components/pokemon/pokemon.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MaterialModule} from './material-module';
-import { TrainerComponent } from './component/trainer/trainer.component';
-import { PokemonFormComponent } from './component/pokemon-form/pokemon-form.component';
-import { PokemonDeleteComponent } from './component/pokemon-delete/pokemon-delete.component';
-import { TrainerFormComponent } from './component/trainer-form/trainer-form.component';
-import { TrainerDeleteComponent } from './component/trainer-delete/trainer-delete.component';
+import { TrainerComponent } from './components/trainer/trainer.component';
+import { PokemonFormComponent } from './components/dialogs/pokemon-form/pokemon-form.component';
+import { PokemonDeleteComponent } from './components/dialogs/pokemon-delete/pokemon-delete.component';
+import { TrainerFormComponent } from './components/dialogs/trainer-form/trainer-form.component';
+import { TrainerDeleteComponent } from './components/dialogs/trainer-delete/trainer-delete.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BodyComponent,
     PokemonComponent,
     TrainerComponent,
     PokemonFormComponent,
