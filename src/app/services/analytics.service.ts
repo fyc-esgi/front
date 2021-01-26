@@ -14,7 +14,7 @@ export class AnalyticsService {
   initializeAnalytics(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        gtag('config', 'G-6P2XKCMR3W',
+        gtag('config', '<mesurement-id>',
           {
             'page_path': event.urlAfterRedirects,
             'anonymize_ip': true
