@@ -30,6 +30,7 @@ export class AnalyticsService {
     eventAction: string,
     eventLabel: string | null = null,
     eventValue: number | null = null) {
+    // vous pouvez nommer les champ comme vous le souhaitez
     gtag('event', eventName, {
       eventCategory: eventCategory,
       eventLabel: eventLabel,
